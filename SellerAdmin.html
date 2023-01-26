@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sellers Admin</title>
+
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="expense.css" />
+  </head>
+
+  <body class="bg-info">
+    <h2 class="text-dark fs-1 fw-bold text-center shadow p-2">Sellers Admin</h2>
+
+    <form onsubmit="addExpence(event)">
+      <label class="form-label fw-semibold text-secondary" for="expence"
+        >Product Amount:</label
+      >
+      <input
+        class="form-control shadow"
+        type="number"
+        name="expence"
+        id="expence"
+        placeholder="Enter your Product amount here..."
+        required
+      />
+
+      <label class="form-label fw-semibold text-secondary" for="description"
+        >Product Name:</label
+      >
+      <input
+        class="form-control shadow"
+        type="text"
+        name="description"
+        id="description"
+        placeholder="Enter product Name here..."
+        required
+      />
+
+      <label class="form-label fw-semibold text-secondary" for="category"
+        >Procuct category:</label
+      >
+      <select class="form-select shadow" id="category" name="category" required>
+        <option value="Electronic">Electronic</option>
+        <option value="Sports">Sports</option>
+        <option value="food">Food</option>
+        <option value="Skin product">Skin Product</option>
+      </select>
+      <button class="btn btn-dark w-25">ADD PRODUCT</button>
+      <button type="reset" class="btn btn-danger w-25">RESET</button>
+    </form>
+    <!-- Below div for showing result on document  -->
+    <h1 class="text-center fw-bold mt-3">Products:</h1>
+    <div class="row">
+      <div class="col w-100" id="Electronic">
+        <b class="fw-bold fs-3"> Electronic</b>
+      </div>
+      <div class="col w-100" id="Sports">
+        <b class="fw-bold fs-3"> Sports </b>
+      </div>
+      <div class="col w-100" id="food">
+        <b class="fw-bold fs-3"> Food </b>
+      </div>
+      <div class="col w-100" id="Skin product">
+        <b class="fw-bold fs-3"> Skin Product </b>
+      </div>
+    </div>
+    <!-- Axios imported here -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- External js imported here -->
+    <script src="SellerAdmin.js"></script>
+  </body>
+</html>
